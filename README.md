@@ -1,8 +1,12 @@
 # Pehelper
 
-Initial commit of Dotnet Core MVC project.
+Dotnet Core MVC project, excercise MVC approach with the real task.
 
-Dotnet core CLI commands
+The purpose of creating Pehelper was to support mass item upload to WPLM.
+Upload the .xls or .xls file. All the WISE esport files must be saved first.
+Then the file can be uploaded. Otherwise it won't work
+
+## Dotnet core CLI commands
 
 ``` dotnet core
 dotnet clean
