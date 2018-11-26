@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <OutputType>exe</OutputType>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <Title>PE Helper</Title>
+    <Version>0.1.0-alfa</Version>
+    <Description>An App to read MS Excell and concatenate echach cell separated by semicolon</Description>
+    <Authors>Darek Luczynski</Authors>
+    <CopyRight>Darek Luczynski</CopyRight>
+    <PackageTags>dotnet core npoi json</PackageTags>
+    <PackageProjectUrl>https://github.com/luczynskidar</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="dotnetcore.npoi" Version="1.2.1"/>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2"/>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.1.1"/>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.1"/>
+  </ItemGroup>
+  <Target Name="CreateLogsFolder" AfterTargets="Publish">
+   <MakeDir Directories="$(PublishDir)Logs" 
+            Condition="!Exists('$(PublishDir)Logs')" />
+   <WriteLinesToFile File="$(PublishDir)Logs\.log" 
+                     Lines="Generated file" 
+                     Overwrite="True" 
+                     Condition="!Exists('$(PublishDir)Logs\.log')" />
+  </Target>
+  <Target Name="CreateTempFolder" AfterTargets="Publish">
+     <MakeDir Directories="$(PublishDir)Temp" 
+            Condition="!Exists('$(PublishDir)Temp')" />
+  </Target>
+</Project>
+
+

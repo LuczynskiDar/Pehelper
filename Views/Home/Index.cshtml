@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using Pehelper.Models
+@using Microsoft.AspNetCore.Http
+@model FormData
+
+@{
+    ViewData["Title"] = "PE Helper Application";
+}
+
+    <h2>@ViewData["Title"]</h2>
+    <h3>@ViewData["Message"]</h3>
+
+    <p>Please choose an MS Excell spraed sheet.</p>
+
+    <div class="form-inline">
+
+        <form asp-controller="Home"  asp-action="Index" method="post" enctype="multipart/form-data" > 
+            <div class="form-group">
+                <input type="file" id="file" name="file" accept=".xls, .xlsx" class="btn btn-default"/>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Upload" class="btn btn-info" />
+            </div>
+        </form>
+        
+    </div>
+
+    <br>
+    @if (Model!=null)
+    {
+        @if(Model.FileName!=null)
+        {
+            <div class="form-inline">
+                <dl>
+                    <div class="form-group"> <dt>Uploaded file name: </dt> </div>
+                    <div class="form-group"> <dd>@Html.DisplayFor(m => m.FileName)</dd> </div>
+                </dl>
+            </div>
+        }       
+    }
+    <form asp-controller="Home" asp-action="Run" method="post" enctype="multipart/form-data" >
+    <div class="form-inline">
+        <div class="form-group">
+            <label class="sr-only" for="ColumnNumber">Column Number:</label>
+            <input type="number" class="form-control" id="ColumnNumber" placeholder="Enter Column Number"  name="ColumnNumber">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="ColumnName">Column Name:</label>
+            <input type="text" class="form-control" id="ColumnName" placeholder="Enter Column Name"  name="ColumnName">
+        </div>
+            <div class="form-group">
+            <label class="sr-only" for="ItemsInRow">Column Name:</label>
+            <input type="text" class="form-control" id="ItemsInRow" placeholder="Items in row"  name="ItemsInRow">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Run" class="btn btn-info" />
+        </div>
+    </div> 
+    </form>
+ 
+    <div class="container">
+            <div class="form-inline">
+                <dl>
+                    <div class="form-group"> <dt>Column number: </dt> </div>
+                    <div class="form-group"> <dd>@Html.DisplayFor(m => m.ColumnNumber)</dd> </div>
+                </dl>
+            </div>
+            <div class="form-inline">
+                <dl>
+                    <div class="form-group"> <dt>Column name: </dt> </div>
+                    <div class="form-group"> <dd>@Html.DisplayFor(m => m.ColumnName)</dd> </div>
+                </dl>
+            </div>
+            <div class="form-inline">
+                <dl>
+                    <div class="form-group"> <dt><dt>Items in row: </dt> </div>
+                    <div class="form-group"> <dd>@Html.DisplayFor(m => m.ItemsInRow)</dd> </div>
+                </dl>
+            </div>
+    </div>
+    <br>
+    @if (Model!=null)
+    {
+        
+        @if(Model.RowElementList!=null &&Model.RowElementList.Count!=0 )
+        {   
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Grouped Items</th>
+                        </tr>
+                    </thead>
+                @foreach (var item in Model.RowElementList)
+                {   
+                    <tbody>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Row)
+                            </td>
+                        </tr>
+                    </tbody>
+                }     
+                </table>
+            </div>
+        }
+    }
