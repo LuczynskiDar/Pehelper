@@ -26,3 +26,10 @@ dotnet publish -c Release -r win10-x64
 ``` dotnet core
 dotnet publish -c release -r win7-x64 -o bin/release/win-x64
 ```
+
+## Git reset clocal repository
+
+``` git reset
+git fetch origin
+git reset --hard origin/master
+```
