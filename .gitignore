@@ -1,3 +1,9 @@
 **/bin/*
-**/obj/*
+**/bin/*/*
+**/obj/**/*
+**/obj/Debug/
+**/obj/Debug/**
+**/obj/Debug/netcoreapp2.1/
+**/obj/Debug/netcoreapp2.1/*
+*.assets.cache
 **/.vscode/*
