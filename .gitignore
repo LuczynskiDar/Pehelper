@@ -7,3 +7,9 @@
 **/obj/Debug/netcoreapp2.1/*
 *.assets.cache
 **/.vscode/*
+obj/Debug/netcoreapp2.1/Pehelper.assets.cache
+obj/Pehelper.csproj.nuget.cache
+obj/Pehelper.csproj.nuget.g.props
+obj/Debug/netcoreapp2.1/Pehelper.assets.cache
+obj/Debug/netcoreapp2.1/Pehelper.Views.dll
+
