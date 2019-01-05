@@ -16,6 +16,10 @@ PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I 
 - Read data are stored in cookies.
 - Use Bootstrap for styling, is a part of ASP.NET MVC project
 
+### App code
+
+- **[View](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Views/Home/Index.cshtml)**
+
 ### App screen shots
 
 - **Startup screen**
