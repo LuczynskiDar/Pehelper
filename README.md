@@ -19,9 +19,11 @@ PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I 
 
 - Choose the column by the column index and show the results by pushing run button
 
+![run colun index](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_number.PNG)
+
 - Choose the column by the column name and show the results by pushing run button
 
-![run column](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_run_column.PNG)
+![run column name](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_run_column.PNG)
 
 ---
 
