@@ -27,7 +27,7 @@ namespace Pehelper.Controllers
         {
             return xlOperator.ReadExcell(myPath);
         }
-        private List<RowElement> SplitData( DataTable data,FormData formData)
+        private List<RowElement> SplitData( DataTable data, FormData formData)
         {
             var dataSplitter = new DataSplitter(data, 
                                                 formData.ItemsInRow, 
