@@ -1,8 +1,8 @@
 # Pehelper
 
->Dotnet Core MVC project, excercise MVC approach with the real task.
+Dotnet Core MVC project, excercise MVC approach with the real task.
 
->The purpose of creating Pehelper was to support mass item upload to the Creo's Windchill, to save engineering time. The app supports .xls or .xls file. 
+>The purpose of creating Pehelper was to support mass item upload to the Creo's Windchill, to save engineering time. The app supports .xls or .xls file.
 
 ## How Pehelper is built
 
@@ -14,7 +14,8 @@ PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I 
 - Excel file will be posted to the server and saved to the Temp project folder.
 - Saved file is read and then deleted.
 - Read data are stored in cookies.
-- Use Bootstrap for styling, is a part of ASP.NET MVC project
+- Use Bootstrap for styling, is a part of ASP.NET MVC project.
+- Finally the app will be hosted in IIS, in intranet.
 
 ### App code
 
