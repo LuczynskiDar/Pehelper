@@ -18,7 +18,14 @@ PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I 
 
 ### App code
 
-- **[View](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Views/Home/Index.cshtml)**
+**[View](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Views/Home/)**
+
+- [/Views/Home/Index.cshtml](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Views/Home/Index.cshtml)
+
+**[Model](https://github.com/LuczynskiDar/Pehelper/tree/nocookie/Models)**
+
+- [/Models/DataModel.cs](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Models/DataModel.cs)
+- [/Models/DataSplitter.cs](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Models/DataSplitter.cs)
 
 ### App screen shots
 
