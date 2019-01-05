@@ -2,12 +2,22 @@
 
 Dotnet Core MVC project, excercise MVC approach with the real task.
 
->The purpose of creating Pehelper was to support mass item upload to the Creo
-s Windchill, to save engineering time. The app supports .xls or .xls file. 
+>The purpose of creating Pehelper was to support mass item upload to the Creo's Windchill, to save engineering time. The app supports .xls or .xls file. 
 
 ## How Pehelper is built
 
 PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I used a [NPOI](https://github.com/dotnetcore/NPOI) library on the back-end, to read posted Excel files. PE Helper, an engineering tool, extracts components’ index from an Excel file, serializes, separates each of them using semicolon and finally splits into desired groups and displayed as rows.
+
+### Design approach
+
+- Excel file will be posted to the server and saved to the Temp project folder.
+- Saved file is read and then deleted.
+-
+For the project purposes will be used an mocro's internal clock,instead of using more reliable external crystal.
+- Drivig the engine will be done on the basis of 4 switches, 2 for changing engine directions (Left/Right),
+  which is actually changing micro's GPIO  and 2 responsible for incrementing and decrementing PWM signal.
+
+### App screen shots
 
 - Startup screen
 
@@ -27,7 +37,7 @@ PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I 
 
 ---
 
-### The Command snippets, which I keep for myself to remember
+### The shell command snippets, which I keep for myself to remember
 
 #### Dotnet core CLI commands
 
