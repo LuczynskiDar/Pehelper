@@ -10,28 +10,27 @@ PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I 
 
 ### Design approach
 
+- It is going to be mainly a single page app.
 - Excel file will be posted to the server and saved to the Temp project folder.
 - Saved file is read and then deleted.
--
-For the project purposes will be used an mocro's internal clock,instead of using more reliable external crystal.
-- Drivig the engine will be done on the basis of 4 switches, 2 for changing engine directions (Left/Right),
-  which is actually changing micro's GPIO  and 2 responsible for incrementing and decrementing PWM signal.
+- Read data are stored in cookies.
+- Use Bootstrap for styling, is a part of ASP.NET MVC project
 
 ### App screen shots
 
-- Startup screen
+- **Startup screen**
 
 ![Startup screen](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_clean.PNG) 
 
-- Choose and upload a file
+- **Choose and upload a file**
 
 ![upload a file](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_uploaded.PNG)
 
-- Choose the column by the column index and show the results by pushing run button
+- **Choose the column by the column index and show the results by pushing run button**
 
 ![run colun index](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_number.PNG)
 
-- Choose the column by the column name and show the results by pushing run button
+- **Choose the column by the column name and show the results by pushing run button**
 
 ![run column name](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_run_column.PNG)
 
