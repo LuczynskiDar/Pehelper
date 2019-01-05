@@ -2,13 +2,56 @@
 
 Dotnet Core MVC project, excercise MVC approach with the real task.
 
-The purpose of creating Pehelper was to support mass item upload to WPLM.
-Upload the .xls or .xls file. All the WISE esport files must be saved first.
-Then the file can be uploaded. Otherwise it won't work
+>The purpose of creating Pehelper was to support mass item upload to the Creo's Windchill, to save engineering time. The app supports .xls or .xls file. 
+
+## How Pehelper is built
+
+PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I used a [NPOI](https://github.com/dotnetcore/NPOI) library on the back-end, to read posted Excel files. PE Helper, an engineering tool, extracts components’ index from an Excel file, serializes, separates each of them using semicolon and finally splits into desired groups and displayed as rows.
+
+### Design approach
+
+- It is going to be mainly a single page app.
+- Excel file will be posted to the server and saved to the Temp project folder.
+- Saved file is read and then deleted.
+- Read data are stored in cookies.
+- Use Bootstrap for styling, is a part of ASP.NET MVC project
+
+### App code
+
+**[View](https://github.com/LuczynskiDar/Pehelper/blob/master/Views/Home/)**
+
+- [/Views/Home/Index.cshtml](https://github.com/LuczynskiDar/Pehelper/blob/master/Views/Home/Index.cshtml)
+
+**[Model](https://github.com/LuczynskiDar/Pehelper/tree/master/Models/)**
+
+- [/Models/DataModel.cs](https://github.com/LuczynskiDar/Pehelper/blob/master/Models/DataModel.cs)
+- [/Models/DataSplitter.cs](https://github.com/LuczynskiDar/Pehelper/blob/master/Models/DataSplitter.cs)
+
+**[Controler](https://github.com/LuczynskiDar/Pehelper/blob/master/Controllers/)**
+
+- [/Controllers/HomeController.cs](https://github.com/LuczynskiDar/Pehelper/blob/master/Controllers/HomeController.cs)
+
+### App screen shots
+
+- **Startup screen**
+
+![Startup screen](https://github.com/LuczynskiDar/Pehelper/blob/master/Img/pehelper_clean.PNG) 
+
+- **Choose and upload a file**
+
+![upload a file](https://github.com/LuczynskiDar/Pehelper/blob/master/Img/pehelper_uploaded.PNG)
+
+- **Choose the column by the column index and show the results by pushing run button**
+
+![run colun index](https://github.com/LuczynskiDar/Pehelper/blob/master/Img/pehelper_number.PNG)
+
+- **Choose the column by the column name and show the results by pushing run button**
+
+![run column name](https://github.com/LuczynskiDar/Pehelper/blob/master/Img/pehelper_run_column.PNG)
 
 ---
 
-### The Command snippets, which I keep for myself to remember
+### The shell command snippets, which I keep for myself to remember
 
 #### Dotnet core CLI commands
 
