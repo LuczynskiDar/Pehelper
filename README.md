@@ -7,7 +7,19 @@ s Windchill, to save engineering time. The app supports .xls or .xls file.
 
 ## How Pehelper is built
 
-PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I used a NPOI library on the back-end, to read posted Excel files. PE Helper, an engineering tool, extracts components’ index from an Excel file, serializes, separates each of them using semicolon and finally splits into desired groups. 
+PE Helper, is a web app, built using Dotnet Core 2.1 and MVC frameworks. Also I used a [NPOI](https://github.com/dotnetcore/NPOI) library on the back-end, to read posted Excel files. PE Helper, an engineering tool, extracts components’ index from an Excel file, serializes, separates each of them using semicolon and finally splits into desired groups and displayed as rows.
+
+- Startup screen
+
+![Startup screen](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_clean.PNG) 
+
+- Choose and upload a file
+
+![upload a file](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_uploaded.PNG)
+
+- Choose the column and show the results by pushing run button
+
+![run column](https://github.com/LuczynskiDar/Pehelper/blob/nocookie/Img/pehelper_run_column.PNG)
 
 ---
 
